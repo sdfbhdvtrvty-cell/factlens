@@ -1,0 +1,51 @@
+mark.factlens-mark {
+  background: transparent !important;
+  color: inherit !important;
+  cursor: help;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+mark.factlens-false { text-decoration-color: #d93025; background: rgba(217,48,37,.08) !important; }
+mark.factlens-misleading { text-decoration-color: #f29900; background: rgba(242,153,0,.10) !important; }
+mark.factlens-flash { outline: 3px solid #1a73e8; outline-offset: 2px; }
+
+.factlens-tip {
+  all: initial;
+  display: none;
+  position: fixed;
+  z-index: 2147483647;
+  max-width: 320px;
+  padding: 10px 12px;
+  background: #202124;
+  color: #f1f3f4;
+  font: 13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+}
+.factlens-tip * { font: inherit; }
+.factlens-tip-title { font-weight: 600; margin-bottom: 4px; }
+.factlens-tip-title.factlens-false { color: #ff8a80; }
+.factlens-tip-title.factlens-misleading { color: #ffd180; }
+.factlens-tip-sources { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+.factlens-tip-sources a {
+  color: #8ab4f8; text-decoration: none; padding: 2px 8px;
+  border: 1px solid #5f6368; border-radius: 12px; font-size: 12px;
+}
+.factlens-tip-sources a:hover { background: #3c4043; }
+
+.factlens-banner {
+  all: initial;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 2147483647;
+  display: flex; align-items: center; gap: 12px; justify-content: center;
+  padding: 8px 16px; background: #d93025; color: #fff;
+  font: 600 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+.factlens-banner span { font-weight: 400; opacity: .95; }
+.factlens-banner button {
+  background: rgba(255,255,255,.2); color: #fff; border: 1px solid rgba(255,255,255,.5);
+  border-radius: 6px; padding: 4px 12px; cursor: pointer; font: inherit;
+}
+.factlens-banner button:hover { background: rgba(255,255,255,.3); }

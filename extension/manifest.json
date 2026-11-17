@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "FactLens",
+  "version": "1.0.0",
+  "description": "Highlights likely false or misleading claims with explanations and sources, and gives a traffic-light summary in the popup.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "FactLens",
+    "default_popup": "popup.html"
+  }
+}
